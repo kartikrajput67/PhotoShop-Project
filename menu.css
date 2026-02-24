@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main_box{
+    background-image: url("photo.jpg");
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.btn_one i {
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+    transition: all 0.2s linear;
+}
+
+.sidebar_menu{
+    position: fixed;
+    left: -300px;
+    height: 100vh;
+    width: 40vh;
+    border-radius: 0 10px 0 0;
+    background-color: rgba(255,255,255,0.07);
+    box-shadow: 0 0 2px white;
+    transition: all 0.4s linear;
+}
+
+.sidebar_menu .logo{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.708);
+    border-radius: 0 10px 0 0;
+}
+
+.sidebar_menu .logo a{
+    position: absolute;
+    left: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.sidebar_menu .btn_two i {
+    color: gray;
+    position: absolute;
+    left: 240px;
+    top: 17px;
+    font-size: 25px;
+    opacity: 0;
+    transition:  0.2s linear;
+}
+.sidebar_menu .menu{
+    position: absolute;
+    top: 80px;
+    color: white;
+    width: 100%;
+}
+
+.sidebar_menu .menu li{
+    margin: 5px;
+    padding: 10px 30px;
+}
+
+.sidebar_menu .menu i,a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.sidebar_menu .menu i{
+    margin-right: 8px;
+}
+
+.sidebar_menu .social_media{
+    position: absolute;
+    left: 22%;
+    bottom: 50px;
+}
+.sidebar_menu .social_media i{
+    padding: 5px;
+    color: rgb(44, 44, 222);
+    opacity: 0.8;
+}
+
+#check{
+    display: none;
+}
+
+.btn_one i:hover{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.btn_two i:hover{
+    font-size: 30px;
+    color: white;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.social_media i:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+#check:checked ~ .sidebar_menu{
+    left: 0;
+}
+
+#check:checked ~ .btn_one{
+    opacity: 0;
+}
+
+#check:checked ~ .sidebar_menu .btn_two i{
+    opacity: 1;
+}
+
+.sidebar_menu .menu li:hover{
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.458);
+}
